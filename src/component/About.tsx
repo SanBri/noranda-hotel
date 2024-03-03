@@ -44,7 +44,6 @@ const About = () => {
           <br />* <b>A</b>ttention, <b>B</b>ienveillance et <b>C</b>âlins !
         </Typography>
       </Stack>
-
       <Stack
         width='25rem'
         height='auto'
