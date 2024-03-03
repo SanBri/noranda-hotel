@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
 import AcacedLogo from "../assets/images/acaced-logo.png";
-import DogWaterImage from "../assets/images/dog-water.jpg";
+import InfoLogo from "../assets/images/info-icon.svg";
 import ForbiddenIcon from "../assets/images/forbidden-icon.svg";
 import WarningLogo from "../assets/images/warning-icon.svg";
 
@@ -23,7 +23,7 @@ const About = () => {
         <Stack margin='auto'>
           <img
             src={AcacedLogo}
-            alt='Logo Acaced'
+            alt="Chien dans l'eau"
             width={"100%"}
             height={"100%"}
           />
@@ -44,28 +44,16 @@ const About = () => {
           <br />* <b>A</b>ttention, <b>B</b>ienveillance et <b>C</b>âlins !
         </Typography>
       </Stack>
+
       <Stack
         width='25rem'
         height='auto'
         borderRadius='5px'
         padding='1.5rem'
+        alignItems='center'
         sx={{ backgroundColor: "rgba(255,255,255,0.3)", position: "relative" }}
       >
-        <Stack
-          width={{ xs: "10rem", sm: "12rem", lg: "20em", xl: "10rem" }}
-          borderRadius='50%'
-          overflow='hidden'
-          top={-115}
-          left={20}
-          margin='auto'
-        >
-          <img
-            src={DogWaterImage}
-            alt="Chien dans l'eau"
-            width={"100%"}
-            height={"100%"}
-          />
-        </Stack>
+        <img src={InfoLogo} alt='Information' width={"40%"} height={"70%"} />
         <Stack gap='1rem'>
           <Stack alignItems='center' gap='0.5rem'>
             <img src={WarningLogo} width='25rem' />
