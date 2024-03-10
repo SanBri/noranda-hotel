@@ -34,7 +34,12 @@ const About = () => {
         <Typography textAlign='center' marginBottom='0.5rem'>
           En possession de l'ACACED obligatoire, je suis également expérimentée.
         </Typography>
-        <Typography fontWeight='500' textAlign='center'>
+        <Typography
+          fontWeight='500'
+          textAlign='center'
+          display={{ xs: "flex", sm: "block" }}
+          flexDirection='column'
+        >
           <FontAwesomeIcon
             icon={faBan}
             color='#1B323D'
