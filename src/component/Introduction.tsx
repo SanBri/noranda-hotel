@@ -50,6 +50,7 @@ const Introduction = () => {
           </Typography>
           <Typography
             sx={{
+              textAlign: "justify",
               textWrap: "pretty",
               paddingTop: "2rem",
               fontSize: { xs: "0.8rem", xl: "1rem" },

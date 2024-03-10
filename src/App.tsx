@@ -6,6 +6,7 @@ import Title from "./component/Title";
 import Introduction from "./component/Introduction";
 import About from "./component/About";
 import Map from "./component/Map";
+import Contact from "./component/Contact";
 
 function App() {
   return (
@@ -21,35 +22,42 @@ function App() {
         <Introduction />
       </Stack>
       <Stack
-        flexDirection={{ xs: "column", lg: "row" }}
         justifyContent='center'
         gap={{ xs: "0rem", lg: "2rem" }}
         alignItems='center'
         sx={{
           boxSizing: "border-box",
           background:
-            "linear-gradient(#F9F918, #F9F918 15%, #00FFFF 85%, #00FFFF)",
+            "linear-gradient(#F9F918, #F9F918 49%, #00FFFF 51%, #00FFFF)",
         }}
       >
-        <About />
         <Stack
-          width={{ xs: "auto", sm: "25rem" }}
-          height='auto'
-          borderRadius='5px'
+          flexDirection={{ xs: "column", lg: "row" }}
+          justifyContent='center'
+          gap={{ xs: "0rem", lg: "2rem" }}
           alignItems='center'
-          gap='1rem'
-          padding='1.5rem'
-          sx={{
-            backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
-            position: "relative",
-          }}
         >
-          <Map />
-          <Typography textAlign='center'>
-            À 45 minutes de <b>Castres</b>.
-            <br />À 1h de <b>Toulouse</b>, <b>Montauban</b> et <b>Rodez</b>
-          </Typography>
+          <About />
+          <Stack
+            width={{ xs: "auto", sm: "25rem" }}
+            height='auto'
+            borderRadius='5px'
+            alignItems='center'
+            gap='1rem'
+            padding='1.5rem'
+            sx={{
+              backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
+              position: "relative",
+            }}
+          >
+            <Map />
+            <Typography textAlign='center'>
+              À 45 minutes de <b>Castres</b>.
+              <br />À 1h de <b>Toulouse</b>, <b>Montauban</b> et <b>Rodez</b>
+            </Typography>
+          </Stack>
         </Stack>
+        <Contact />
       </Stack>
     </ThemeProvider>
   );

@@ -4,7 +4,7 @@ import { GoogleMap, LoadScript } from "@react-google-maps/api";
 // Define the container style for the map
 const containerStyle = {
   width: "90%",
-  height: "250px",
+  height: "290px",
 };
 
 // Define the initial center of the map

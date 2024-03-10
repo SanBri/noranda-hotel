@@ -1,3 +1,5 @@
+import { faBan } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
@@ -15,7 +17,7 @@ const About = () => {
         width={{ xs: "auto", sm: "25rem" }}
         height='auto'
         borderRadius='5px'
-        padding={{ xs: "0.5rem", sm: "1.5rem" }}
+        padding={{ xs: "0.5rem", sm: "2rem 1.5rem" }}
         sx={{
           backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
           position: "relative",
@@ -29,8 +31,16 @@ const About = () => {
             height={"100%"}
           />
         </Stack>
-        <Typography textAlign='center'>
+        <Typography textAlign='center' marginBottom='0.5rem'>
           En possession de l'ACACED obligatoire, je suis également expérimentée.
+        </Typography>
+        <Typography fontWeight='500' textAlign='center'>
+          <FontAwesomeIcon
+            icon={faBan}
+            color='#1B323D'
+            style={{ marginRight: "0.3rem" }}
+          />
+          aux chiens de catégories 2 et 3
         </Typography>
       </Stack>
     </Stack>
