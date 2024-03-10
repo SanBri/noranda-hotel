@@ -1,55 +1,102 @@
+import {
+  faFilePen,
+  faMobileScreenButton,
+  faTriangleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
 import DogWaterImage from "../assets/images/dog-water.jpg";
+import LogoItem from "./LogoItem";
 
 const Introduction = () => {
   return (
     <Stack
-      width={{ xs: "70%", sm: "60%", xl: "40%" }}
+      width={{ xs: "70%", xl: "53%" }}
+      margin={{ xs: "1rem auto 0", sm: "1rem auto 0", xl: "5rem auto 0" }}
       height='auto'
       borderRadius='5px'
       padding='2rem'
-      marginY='auto'
       gap='2rem'
-      flexDirection={{ xs: "column", lg: "row" }}
       sx={{ backgroundColor: "rgba(255,255,255,0.3)", position: "relative" }}
     >
       <Stack
-        width={{ xs: "10rem", sm: "12rem", lg: "20em", xl: "10rem" }}
-        borderRadius='50%'
-        overflow='hidden'
-        position={{ xs: "initial", xl: "absolute" }}
-        top={-115}
-        left={20}
-        margin='auto'
+        flexDirection={{ xs: "column", lg: "row" }}
+        gap={{ xs: "0.1rem", lg: "2rem" }}
       >
-        <img
-          src={DogWaterImage}
-          alt="Chien dans l'eau"
-          width={"100%"}
-          height={"100%"}
-        />
+        <Stack
+          width={{ xs: "10rem", sm: "9rem", lg: "12rem", xl: "10rem" }}
+          borderRadius='50%'
+          overflow='hidden'
+          position={{ xs: "initial", xl: "absolute" }}
+          top={-115}
+          left={20}
+          margin='auto'
+        >
+          <img
+            src={DogWaterImage}
+            alt="Chien dans l'eau"
+            width={"100%"}
+            height={"100%"}
+          />
+        </Stack>
+        <Stack>
+          <Typography
+            textAlign='center'
+            fontWeight='500'
+            sx={{ fontSize: { xs: "1rem", xl: "1.3rem" } }}
+          >
+            Hôtel pour toutous
+          </Typography>
+          <Typography
+            sx={{
+              textWrap: "pretty",
+              paddingTop: "2rem",
+              fontSize: { xs: "0.8rem", xl: "1rem" },
+            }}
+          >
+            Vous allez visiter la région, vous partez en vacances ou en week-end
+            ?
+            <br />
+            <br />
+            Venez confier votre "bébé" à une fan des premiers jours de Mabrouk,
+            Junior et de leur maitre JPH.
+            <br />
+            Dans un environnement calmee et reposant, l'<b>ABC</b> est au
+            rendez-vous :
+            <br />- De l'<b>A</b>ttention,
+            <br />- de la <b>B</b>ienveillance,
+            <br />- et des <b>C</b>alins
+          </Typography>
+          <Typography
+            sx={{
+              textWrap: "pretty",
+              paddingTop: "2rem",
+              fontSize: { xs: "0.8rem", xl: "1rem" },
+            }}
+          >
+            Chez moi votre toutou, passe directement de son coussin dans le
+            salon, au jardin sécurisé.
+          </Typography>
+        </Stack>
       </Stack>
-      <Stack>
-        <Typography
-          textAlign='center'
-          fontWeight='500'
-          sx={{ fontSize: "1.3rem" }}
-        >
-          Hôtel pour toutous
-        </Typography>
-        <Typography
-          sx={{
-            textWrap: "pretty",
-            paddingTop: "2rem",
-          }}
-        >
-          Vous partez en vacances, en week-end ou êtes hospitalisé et vous avez
-          besoin de faire garder votre toutou ?<br />
-          <br />
-          Confiez-le moi au Noranda Hotel !
-        </Typography>
+      <Stack
+        flexDirection={{ xs: "column", sm: "row" }}
+        gap='2rem'
+        justifyContent={"center"}
+      >
+        <LogoItem
+          icon={faFilePen}
+          title='Questionnaire pré-admission à remplir'
+        />
+        <LogoItem
+          icon={faMobileScreenButton}
+          title='Envoi régulier de photos afin de vous rassurer'
+        />
+        <LogoItem
+          icon={faTriangleExclamation}
+          title='Pour un service de qualité, les places sont limitées'
+        />
       </Stack>
     </Stack>
   );

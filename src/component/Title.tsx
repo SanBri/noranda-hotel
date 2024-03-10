@@ -13,7 +13,7 @@ const Title = () => {
         alignItems='center'
       >
         <Stack
-          width={{ xs: "8rem", sm: "10rem", xl: "12rem" }}
+          width={{ xs: "8rem", xl: "12rem" }}
           sx={{ transform: "rotate(-10deg)" }}
         >
           <img
@@ -25,8 +25,8 @@ const Title = () => {
         <Typography
           fontFamily={"Pacifico"}
           sx={{
-            paddingTop: { xs: 0, sm: "7rem" },
-            fontSize: { xs: "2rem", sm: "2.6rem", xl: "3.2rem" },
+            paddingTop: { xs: 0, lg: "3rem", xl: "6rem" },
+            fontSize: { xs: "2rem", xl: "3.2rem" },
           }}
         >
           Le Noranda

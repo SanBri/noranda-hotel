@@ -1,17 +1,17 @@
-import { Stack, ThemeProvider } from "@mui/material";
+import { Stack, ThemeProvider, Typography } from "@mui/material";
 
 import { customTheme } from "./utils/customTheme";
 
 import Title from "./component/Title";
 import Introduction from "./component/Introduction";
 import About from "./component/About";
+import Map from "./component/Map";
 
 function App() {
   return (
     <ThemeProvider theme={customTheme}>
       <Stack
         overflow='hidden'
-        height={{ xs: "100vh", xl: "40rem" }}
         padding={{ xs: "0.5rem", xl: "2rem" }}
         boxSizing={"border-box"}
         alignItems='center'
@@ -21,17 +21,35 @@ function App() {
         <Introduction />
       </Stack>
       <Stack
-        overflow='hidden'
-        height={"auto"}
-        padding={{ xs: "0.5rem", xl: "1rem" }}
-        boxSizing={"border-box"}
+        flexDirection={{ xs: "column", lg: "row" }}
+        justifyContent='center'
+        gap={{ xs: "0rem", lg: "2rem" }}
         alignItems='center'
         sx={{
+          boxSizing: "border-box",
           background:
-            "linear-gradient(#F9F918, #F9F918 20%, #00FFFF 80%, #00FFFF)",
+            "linear-gradient(#F9F918, #F9F918 15%, #00FFFF 85%, #00FFFF)",
         }}
       >
         <About />
+        <Stack
+          width={{ xs: "auto", sm: "25rem" }}
+          height='auto'
+          borderRadius='5px'
+          alignItems='center'
+          gap='1rem'
+          padding='1.5rem'
+          sx={{
+            backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
+            position: "relative",
+          }}
+        >
+          <Map />
+          <Typography textAlign='center'>
+            À 45 minutes de <b>Castres</b>.
+            <br />À 1h de <b>Toulouse</b>, <b>Montauban</b> et <b>Rodez</b>
+          </Typography>
+        </Stack>
       </Stack>
     </ThemeProvider>
   );
