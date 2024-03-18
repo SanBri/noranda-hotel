@@ -6,58 +6,63 @@ import Title from "./component/Title";
 import Introduction from "./component/Introduction";
 import About from "./component/About";
 import Map from "./component/Map";
-import Contact from "./component/Contact";
 
 function App() {
   return (
     <ThemeProvider theme={customTheme}>
       <Stack
-        overflow='hidden'
-        padding={{ xs: "0.5rem", xl: "2rem" }}
-        boxSizing={"border-box"}
-        alignItems='center'
-        sx={{ background: "linear-gradient(#ea6927, #F9F918)" }}
-      >
-        <Title />
-        <Introduction />
-      </Stack>
-      <Stack
-        justifyContent='center'
-        gap={{ xs: "0rem", lg: "2rem" }}
-        alignItems='center'
         sx={{
           boxSizing: "border-box",
-          background:
-            "linear-gradient(#F9F918, #F9F918 49%, #00FFFF 51%, #00FFFF)",
+          overflow: "hidden",
+          background: "linear-gradient(#ea6927, #F9F918 50%, #00FFFF 50%)",
+          minHeight: "100vh",
         }}
       >
         <Stack
-          flexDirection={{ xs: "column", lg: "row" }}
+          padding={{ xs: "0.5rem", xl: "2rem" }}
+          boxSizing={"border-box"}
+          justifyContent='center'
+          alignItems='center'
+        >
+          <Title />
+          <Introduction />
+        </Stack>
+        <Stack
           justifyContent='center'
           gap={{ xs: "0rem", lg: "2rem" }}
           alignItems='center'
+          sx={{
+            boxSizing: "border-box",
+          }}
         >
-          <About />
           <Stack
-            width={{ xs: "auto", sm: "25rem" }}
-            height='auto'
-            borderRadius='5px'
+            flexDirection={{ xs: "column", lg: "row" }}
+            // justifyContent='center'
+            gap={{ xs: "0rem", lg: "2rem" }}
             alignItems='center'
-            gap='1rem'
-            padding='1.5rem'
-            sx={{
-              backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
-              position: "relative",
-            }}
           >
-            <Map />
-            <Typography textAlign='center'>
-              À 45 minutes de <b>Castres</b>.
-              <br />À 1h de <b>Toulouse</b>, <b>Montauban</b> et <b>Rodez</b>
-            </Typography>
+            <About />
+            <Stack
+              width={{ xs: "100%", sm: "22rem", md: "25rem" }}
+              height='auto'
+              borderRadius='5px'
+              alignItems='center'
+              gap='1rem'
+              padding={{ xs: "0", sm: "1.5rem" }}
+              sx={{
+                backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
+                position: "relative",
+              }}
+            >
+              <Map />
+              <Typography textAlign='center'>
+                À <b>Lescure d'Albigeois</b>, à moins de 15 minutes de la{" "}
+                <b>Cathédrale Ste Cécile</b> et du <b>musée Toulouse Lautrec</b>
+                .
+              </Typography>
+            </Stack>
           </Stack>
         </Stack>
-        <Contact />
       </Stack>
     </ThemeProvider>
   );

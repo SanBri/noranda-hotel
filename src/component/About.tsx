@@ -45,7 +45,7 @@ const About = () => {
             color='#1B323D'
             style={{ marginRight: "0.3rem" }}
           />
-          aux chiens de catégories 2 et 3
+          aux chiens de catégories 1 et 2
         </Typography>
       </Stack>
     </Stack>
