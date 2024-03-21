@@ -1,10 +1,9 @@
-import { Typography } from "@mui/material";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 // Define the container style for the map
 const containerStyle = {
   width: "99%",
-  height: "290px",
+  height: "70rem",
 };
 
 // Define the initial center of the map

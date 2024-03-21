@@ -24,8 +24,8 @@ const Title = () => {
           <Typography
             fontFamily={"Roboto Black"}
             sx={{
-              lineHeight: "1.7rem",
-              fontSize: { xs: "2rem", xl: "2.5rem" },
+              lineHeight: { xs: "1.7rem", xl: "2.6rem" },
+              fontSize: { xs: "2rem", xl: "2.7rem" },
             }}
           >
             LE NORANDA
@@ -33,8 +33,8 @@ const Title = () => {
           <Typography
             fontFamily={"Roboto Black"}
             sx={{
-              lineHeight: "0.9em",
-              fontSize: { xs: "1rem", xl: "1.2rem" },
+              lineHeight: { xs: "0.9em", xl: "1.6rem" },
+              fontSize: { xs: "1rem", xl: "1.5rem" },
             }}
           >
             {"HOTEL & GARDERIE POUR TOUTOUS"}
@@ -42,8 +42,8 @@ const Title = () => {
           <Typography
             fontFamily={"Roboto Black"}
             sx={{
-              lineHeight: "1em",
-              fontSize: { xs: "0.9rem", xl: "1rem" },
+              lineHeight: { xs: "1em", xl: "1.3rem" },
+              fontSize: { xs: "0.9rem", xl: "1.2rem" },
             }}
           >
             {"Tél. 05 32 89 92 83"}

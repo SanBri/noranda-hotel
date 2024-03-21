@@ -14,15 +14,17 @@ function App() {
         sx={{
           boxSizing: "border-box",
           overflow: "hidden",
-          background: "linear-gradient(#ea6927, #F9F918 50%, #00FFFF 50%)",
           minHeight: "100vh",
         }}
       >
         <Stack
-          padding={{ xs: "0.5rem", xl: "2rem" }}
+          padding={{ xs: "0.5rem", md: "0.5rem 0.5rem 2rem", xl: "2rem" }}
           boxSizing={"border-box"}
           justifyContent='center'
           alignItems='center'
+          sx={{
+            background: "linear-gradient(#ea6927, #F9F918)",
+          }}
         >
           <Title />
           <Introduction />
@@ -33,29 +35,33 @@ function App() {
           alignItems='center'
           sx={{
             boxSizing: "border-box",
+            backgroundColor: "#00FFFF",
           }}
+          padding={{ xs: "0", sm: "2rem" }}
         >
           <Stack
             flexDirection={{ xs: "column", lg: "row" }}
-            // justifyContent='center'
             gap={{ xs: "0rem", lg: "2rem" }}
             alignItems='center'
           >
             <About />
             <Stack
-              width={{ xs: "100%", sm: "22rem", md: "25rem" }}
-              height='auto'
+              width='100%'
+              height={{ xs: "30rem", xl: "30rem" }}
               borderRadius='5px'
               alignItems='center'
-              gap='1rem'
-              padding={{ xs: "0", sm: "1.5rem" }}
+              gap='2rem'
+              padding={{ xs: "0", sm: "1.5rem", xl: "1rem" }}
               sx={{
-                backgroundColor: { xs: "initial", sm: "rgba(255,255,255,0.3)" },
                 position: "relative",
               }}
             >
               <Map />
-              <Typography textAlign='center'>
+              <Typography
+                textAlign='center'
+                padding='0 0.5rem'
+                sx={{ fontSize: { xs: "1rem", xl: "1.2rem" } }}
+              >
                 À <b>Lescure d'Albigeois</b>, à moins de 15 minutes de la{" "}
                 <b>Cathédrale Ste Cécile</b> et du <b>musée Toulouse Lautrec</b>
                 .

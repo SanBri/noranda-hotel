@@ -1,8 +1,11 @@
 import {
+  faBan,
   faFilePen,
   faMobileScreenButton,
+  faPhone,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
@@ -12,12 +15,12 @@ import LogoItem from "./LogoItem";
 const Introduction = () => {
   return (
     <Stack
-      width={{ xs: "70%", xl: "53%" }}
-      margin={{ xs: "1rem auto 0", sm: "1rem auto 0", xl: "5rem auto 0" }}
+      width={{ xs: "70%", xl: "85%" }}
+      margin={{ xs: "1rem auto 0", sm: "1rem auto 0", xl: "1rem auto 0" }}
       height='auto'
       borderRadius='5px'
       padding='0.5rem 2rem'
-      gap='2rem'
+      gap='2.5rem'
       sx={{ backgroundColor: "rgba(255,255,255,0.3)", position: "relative" }}
     >
       <Stack
@@ -25,12 +28,9 @@ const Introduction = () => {
         gap={{ xs: "0.1rem", lg: "2rem" }}
       >
         <Stack
-          width={{ xs: "10rem", sm: "9rem", lg: "12rem", xl: "10rem" }}
+          width={{ xs: "10rem", sm: "9rem", lg: "12rem", xl: "18rem" }}
           borderRadius='50%'
           overflow='hidden'
-          position={{ xs: "initial", xl: "absolute" }}
-          top={-115}
-          left={20}
           margin='auto'
         >
           <img
@@ -46,7 +46,7 @@ const Introduction = () => {
               textAlign: "justify",
               textWrap: "pretty",
               paddingTop: "2rem",
-              fontSize: { xs: "0.8rem", xl: "1rem" },
+              fontSize: { xs: "0.8rem", xl: "1.2rem" },
             }}
           >
             Vous allez visiter la région, vous partez en vacances ou en week-end
@@ -61,7 +61,7 @@ const Introduction = () => {
               textAlign: "justify",
               textWrap: "pretty",
               paddingTop: "2rem",
-              fontSize: { xs: "0.8rem", xl: "1rem" },
+              fontSize: { xs: "0.8rem", xl: "1.2rem" },
             }}
           >
             Dans un environnement calme et reposant, l'<b>ABC</b> est au
@@ -70,16 +70,30 @@ const Introduction = () => {
             <br />- de la <b>B</b>ienveillance,
             <br />- et des <b>C</b>âlins
           </Typography>
-
           <Typography
             sx={{
               textWrap: "pretty",
               paddingTop: "2rem",
-              fontSize: { xs: "0.8rem", xl: "1rem" },
+              fontSize: { xs: "0.8rem", xl: "1.2rem" },
             }}
           >
             Chez moi votre toutou passe directement de son coussin dans le
             salon, au jardin sécurisé.
+          </Typography>
+          <Typography
+            sx={{
+              textWrap: "pretty",
+              paddingTop: "2rem",
+              fontSize: { xs: "0.8rem", xl: "1.2rem" },
+              textAlign: "center",
+            }}
+          >
+            N'hésitez pas à vous renseigner au <b>05 32 89 92 83</b>
+            <FontAwesomeIcon
+              icon={faPhone}
+              color='#1B323D'
+              style={{ marginLeft: "5px" }}
+            />
           </Typography>
         </Stack>
       </Stack>
@@ -96,6 +110,10 @@ const Introduction = () => {
         <LogoItem
           icon={faTriangleExclamation}
           title='Pour un service de qualité, les places sont limitées'
+        />
+        <LogoItem
+          icon={faBan}
+          title='Interdit aux chiens de catégories 1 et 2'
         />
       </Stack>
     </Stack>

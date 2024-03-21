@@ -10,12 +10,12 @@ interface Props {
 
 const LogoItem = ({ icon, title }: Props) => {
   return (
-    <Stack gap='0.5rem'>
+    <Stack gap={{ xs: "0.5rem", sm: "1rem" }}>
       <FontAwesomeIcon icon={icon} size='xl' color='#1B323D' />
       <Typography
         sx={{
           textWrap: "pretty",
-          fontSize: { xs: "0.8rem", xl: "1rem" },
+          fontSize: { xs: "0.8rem", xl: "1.2rem" },
           textAlign: "center",
         }}
       >
