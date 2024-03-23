@@ -58,17 +58,15 @@ const Introduction = () => {
           </Typography>
           <Typography
             sx={{
-              textAlign: "justify",
-              textWrap: "pretty",
               paddingTop: "2rem",
               fontSize: { xs: "0.8rem", xl: "1.2rem" },
             }}
           >
             Dans un environnement calme et reposant, l'<b>ABC</b> est au
             rendez-vous :
-            <br />- De l'<b>A</b>ttention,
-            <br />- de la <b>B</b>ienveillance,
-            <br />- et des <b>C</b>âlins
+            <br />- De l'<strong>A</strong>ttention,
+            <br />- de la <strong>B</strong>ienveillance,
+            <br />- et des <strong>C</strong>âlins
           </Typography>
           <Typography
             sx={{
@@ -88,12 +86,13 @@ const Introduction = () => {
               textAlign: "center",
             }}
           >
-            N'hésitez pas à vous renseigner au <b>05 32 89 92 83</b>
+            N'hésitez pas à vous renseigner au :<br />
             <FontAwesomeIcon
               icon={faPhone}
               color='#1B323D'
-              style={{ marginLeft: "5px" }}
+              style={{ marginRight: "5px" }}
             />
+            <b>05 32 89 92 83</b>
           </Typography>
         </Stack>
       </Stack>
